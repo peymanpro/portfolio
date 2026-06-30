@@ -1,13 +1,3 @@
-// ==========================================
-// Data Import (global from data/projects.js)
-// ==========================================
-
-// The 'sections' array is expected to be defined in data/projects.js
-// and loaded before this script.
-
-// ==========================================
-// Lightbox Module
-// ==========================================
 
 const Lightbox = (() => {
     let instance = null;
@@ -22,20 +12,17 @@ const Lightbox = (() => {
         image.alt = '';
         overlay.appendChild(image);
 
-        // Click outside image closes lightbox
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) {
                 close();
             }
         });
 
-        // ESC key closes lightbox
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && overlay.classList.contains('show')) {
                 close();
             }
         });
-
         return overlay;
     }
 
@@ -65,12 +52,8 @@ const Lightbox = (() => {
     return { open, close };
 })();
 
-// ==========================================
-// Gallery Module
-// ==========================================
 
 const Gallery = (() => {
-    // Calculate card width + gap dynamically
     function getCardWidth(gallery) {
         const card = gallery.querySelector('article');
         if (!card) return 420 + 24;
@@ -106,7 +89,6 @@ const Gallery = (() => {
         let isWheeling = false;
 
         gallery.addEventListener('wheel', (e) => {
-            // Only handle horizontal wheel events or if shift is held
             if (Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.shiftKey) {
                 e.preventDefault();
                 const amount = e.deltaX || e.deltaY;
@@ -114,7 +96,6 @@ const Gallery = (() => {
             }
         }, { passive: false });
 
-        // Also support mouse wheel with shift key for vertical scroll
         gallery.addEventListener('wheel', (e) => {
             if (e.shiftKey) {
                 e.preventDefault();
@@ -126,23 +107,19 @@ const Gallery = (() => {
     function createGallery(items) {
         if (!items || items.length === 0) return null;
 
-        // Wrapper
         const wrapper = document.createElement('div');
         wrapper.className = 'gallery-wrapper';
 
-        // Left button
         const leftBtn = document.createElement('button');
         leftBtn.className = 'gallery-button left hidden';
         leftBtn.innerHTML = '&#10094;';
         leftBtn.setAttribute('aria-label', 'Previous slide');
 
-        // Gallery container
         const gallery = document.createElement('div');
         gallery.className = 'gallery';
         gallery.setAttribute('role', 'region');
         gallery.setAttribute('aria-label', 'Project gallery');
 
-        // Items
         items.forEach((item) => {
             const article = document.createElement('article');
 
@@ -155,12 +132,10 @@ const Gallery = (() => {
             img.setAttribute('tabindex', '0');
             img.setAttribute('aria-label', `View ${item.title || 'image'} fullscreen`);
 
-            // Click to open lightbox
             img.addEventListener('click', () => {
                 Lightbox.open(item.image, item.title || '');
             });
 
-            // Keyboard support for lightbox
             img.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
@@ -177,13 +152,12 @@ const Gallery = (() => {
             gallery.appendChild(article);
         });
 
-        // Right button
+
         const rightBtn = document.createElement('button');
         rightBtn.className = 'gallery-button right';
         rightBtn.innerHTML = '&#10095;';
         rightBtn.setAttribute('aria-label', 'Next slide');
 
-        // Button click handlers
         leftBtn.addEventListener('click', () => {
             scrollGallery(gallery, 'left');
         });
@@ -199,27 +173,22 @@ const Gallery = (() => {
 
         gallery.addEventListener('scroll', scrollHandler);
 
-        // Initial button state after render
-        // Use requestAnimationFrame to ensure layout is complete
+    
         requestAnimationFrame(() => {
             updateButtons(gallery, leftBtn, rightBtn);
         });
 
-        // Also update on resize
         const resizeObserver = new ResizeObserver(() => {
             updateButtons(gallery, leftBtn, rightBtn);
         });
         resizeObserver.observe(gallery);
 
-        // Setup wheel scrolling
         setupWheelScroll(gallery);
 
-        // Assemble
         wrapper.appendChild(leftBtn);
         wrapper.appendChild(gallery);
         wrapper.appendChild(rightBtn);
 
-        // Store reference to gallery for cleanup if needed
         wrapper._gallery = gallery;
         wrapper._resizeObserver = resizeObserver;
 
@@ -229,9 +198,7 @@ const Gallery = (() => {
     return { createGallery };
 })();
 
-// ==========================================
-// Section Renderer
-// ==========================================
+
 
 const SectionRenderer = {
     createTitle(text) {
@@ -278,7 +245,7 @@ const SectionRenderer = {
 
         const title = document.createElement('h3');
         title.className = 'sub-title';
-        title.textContent = 'Project Gallery';
+        title.textContent = 'Gallery';
         container.appendChild(title);
 
         const gallery = Gallery.createGallery(items);
@@ -292,23 +259,19 @@ const SectionRenderer = {
     renderSection(section) {
         const element = document.createElement('section');
 
-        // Title
         if (section.title) {
             element.appendChild(this.createTitle(section.title));
         }
 
-        // Description
         if (section.description) {
             element.appendChild(this.createDescription(section.description));
         }
 
-        // Technologies
         if (section.technologies && section.technologies.length > 0) {
             const techEl = this.createTechnologies(section.technologies);
             if (techEl) element.appendChild(techEl);
         }
 
-        // Gallery
         if (section.items && section.items.length > 0) {
             const galleryEl = this.createGallerySection(section.items);
             if (galleryEl) element.appendChild(galleryEl);
@@ -317,10 +280,6 @@ const SectionRenderer = {
         return element;
     }
 };
-
-// ==========================================
-// Main
-// ==========================================
 
 (function init() {
     const content = document.getElementById('content');
@@ -334,10 +293,8 @@ const SectionRenderer = {
         return;
     }
 
-    // Clear any existing content (in case of re-render)
     content.innerHTML = '';
 
-    // Render each section
     sections.forEach((section) => {
         const element = SectionRenderer.renderSection(section);
         if (element) {
