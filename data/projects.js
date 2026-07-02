@@ -110,6 +110,9 @@ const sections = [
         image: "images/security-system-homepage.jpg",
       },
 
+    ],
+  },
+
   {
     title: "Scientific Achievement",
 
