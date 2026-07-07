@@ -1,40 +1,79 @@
 const sections = [
   {
-    title: "Enterprise Information Management Platform",
+     title: "Enterprise Micro Frontend Architecture",
 
-    description:
-      "A modern enterprise information management platform based on a Micro Frontend architecture with 12 independent frontend applications integrated using Module Federation. The backend follows a microservices architecture powered by ASP.NET Core and YARP API Gateway, providing centralized authentication, scalability, maintainability, and enterprise-level software development.",
+  description:
+    "An enterprise-scale Micro Frontend platform built with React, TypeScript, and Webpack Module Federation. The architecture is orchestrated by a Meta AppShell that performs application bootstrap, authentication checks, runtime module loading, navigation, and role-based access control. Business applications are independently developed, deployed, and dynamically loaded at runtime, enabling high scalability, maintainability, and team autonomy across enterprise domains.",
 
-    technologies: [
-      "React",
-      "TypeScript",
-      "Micro Frontend",
-      "Module Federation",
-      "ASP.NET Core",
-      "Microservices",
-      "YARP API Gateway",
-      "PostgreSQL",
-      "JWT Authentication",
-      "OAuth 2.0",
-      "OpenID Connect (OIDC)",
-      "Docker",
-      "Nginx",
-    ],
+  technologies: [
+    "React",
+    "TypeScript",
+    "Webpack Module Federation",
+    "Micro Frontend",
+    "Meta AppShell",
+    "React Router",
+    "JWT Authentication",
+    "Role-Based Access Control (RBAC)"
+  ],
 
     items: [
       {
-        title: "Login Page",
+        title: "LoginMF",
         image: "images/information-management-login.jpg",
       },
 
       {
-        title: "Main Pages",
+        title: "PortalMF",
         image: "images/information-management-main-pages.jpg",
       },
       {
         title: "MeatChickenPro Micro Frontend",
         image: "images/meat-chicken-pro-home-page.jpg",
       },
+
+        {
+        title: "Runtime Flow",
+        image: "images/d1.jpg",
+      },
+         {
+        title: "Ecosystem",
+        image: "images/d2.jpg",
+      },
+
+              {
+        title: "Meta AppShell",
+        image: "images/d3.jpg",
+      },
+
+                 {
+        title: "Module Federation Runtime",
+        image: "images/d4.jpg",
+      },
+                     {
+        title: "Portal Orchestrator",
+        image: "images/d5.jpg",
+      },
+
+                          {
+        title: "Authentication & Authorization Flow",
+        image: "images/d6.jpg",
+      },
+
+                             {
+        title: "Shared Micro Frontend",
+        image: "images/d7.jpg",
+      },
+
+                                   {
+        title: "Frontend Event Bus",
+        image: "images/d8.jpg",
+      },
+
+                                       {
+        title: "Enterprise Frontend Deployment",
+        image: "images/d9.jpg",
+      },
+
     ],
   },
 
