@@ -1,9 +1,9 @@
 const sections = [
   {
-     title: "Enterprise Micro Frontend Architecture",
+  title: "Enterprise Micro Frontend Architecture",
 
   description:
-    "An enterprise-scale Micro Frontend platform built with React, TypeScript, and Webpack Module Federation. The architecture is orchestrated by a Meta AppShell that performs application bootstrap, authentication checks, runtime module loading, navigation, and role-based access control. Business applications are independently developed, deployed, and dynamically loaded at runtime, enabling high scalability, maintainability, and team autonomy across enterprise domains.",
+    "This architecture was designed and implemented for Chilik Sazan Iranian Co. as the frontend foundation of the Enterprise Information Management Platform. The primary objective was to build a scalable enterprise application by decomposing the user interface into independently developed and deployable Micro Frontends. A Meta AppShell orchestrates the entire platform by handling application bootstrap, authentication checks, runtime module loading, navigation, and role-based access control. Business applications are dynamically integrated at runtime using Webpack Module Federation, allowing independent development, deployment, and maintenance across multiple business domains. The published diagrams intentionally simplify certain implementation details to respect project confidentiality while accurately representing the overall architecture, runtime behavior, and engineering decisions.",
 
   technologies: [
     "React",
@@ -16,66 +16,135 @@ const sections = [
     "Role-Based Access Control (RBAC)"
   ],
 
-    items: [
-      {
-        title: "LoginMF",
-        image: "images/information-management-login.jpg",
-      },
+  items: [
+    {
+      title: "LoginMF",
+      image: "images/information-management-login.jpg",
+    },
 
-      {
-        title: "PortalMF",
-        image: "images/information-management-main-pages.jpg",
-      },
-      {
-        title: "MeatChickenPro Micro Frontend",
-        image: "images/meat-chicken-pro-home-page.jpg",
-      },
+    {
+      title: "PortalMF",
+      image: "images/information-management-main-pages.jpg",
+    },
 
-        {
-        title: "Runtime Flow",
-        image: "images/d1.jpg",
-      },
-         {
-        title: "Ecosystem",
-        image: "images/d2.jpg",
-      },
+    {
+      title: "MeatChickenPro Micro Frontend",
+      image: "images/meat-chicken-pro-home-page.jpg",
+    },
 
-              {
-        title: "Meta AppShell",
-        image: "images/d3.jpg",
-      },
+    {
+      title: "Runtime Flow",
+      image: "images/d1.jpg",
+    },
 
-                 {
-        title: "Module Federation Runtime",
-        image: "images/d4.jpg",
-      },
-                     {
-        title: "Portal Orchestrator",
-        image: "images/d5.jpg",
-      },
+    {
+      title: "Ecosystem",
+      image: "images/d2.jpg",
+    },
 
-                          {
-        title: "Authentication & Authorization Flow",
-        image: "images/d6.jpg",
-      },
+    {
+      title: "Meta AppShell",
+      image: "images/d3.jpg",
+    },
 
-                             {
-        title: "Shared Micro Frontend",
-        image: "images/d7.jpg",
-      },
+    {
+      title: "Module Federation Runtime",
+      image: "images/d4.jpg",
+    },
 
-                                   {
-        title: "Frontend Event Bus",
-        image: "images/d8.jpg",
-      },
+    {
+      title: "Portal Orchestrator",
+      image: "images/d5.jpg",
+    },
 
-                                       {
-        title: "Enterprise Frontend Deployment",
-        image: "images/d9.jpg",
-      },
+    {
+      title: "Authentication & Authorization Flow",
+      image: "images/d6.jpg",
+    },
 
-    ],
-  },
+    {
+      title: "Shared Micro Frontend",
+      image: "images/d7.jpg",
+    },
+
+    {
+      title: "Frontend Event Bus",
+      image: "images/d8.jpg",
+    },
+
+    {
+      title: "Enterprise Frontend Deployment",
+      image: "images/d9.jpg",
+    },
+  ],
+},
+  {
+  title: "Enterprise Microservices Architecture",
+
+  description:
+    "This architecture was designed and implemented for Chilik Sazan Iranian Co. as the backend foundation of the Enterprise Information Management Platform. The primary objective was to support the organization's Micro Frontend ecosystem while establishing a scalable and future-ready service architecture. A centralized YARP API Gateway was introduced as the single entry point for all current and future client applications, enabling seamless integration with web, desktop, mobile, and third-party systems. A dedicated Authentication Service provides centralized identity management and consistent security across the company's software ecosystem. Each business domain is implemented as an autonomous microservice with its own database, while gRPC and RabbitMQ enable efficient synchronous and asynchronous communication between services. The published diagrams intentionally simplify certain implementation details to respect project confidentiality while accurately representing the overall architectural design and engineering decisions.",
+
+  technologies: [
+    "ASP.NET Core",
+    "C#",
+    "Microservices",
+    "YARP API Gateway",
+    "gRPC",
+    "RabbitMQ",
+    "PostgreSQL",
+    "Entity Framework Core",
+    "JWT Authentication",
+    "Database per Service",
+    "Docker"
+  ],
+
+  items: [
+    {
+      title: "Enterprise Microservices Ecosystem",
+      image: "images/ms1.jpg",
+    },
+
+    {
+      title: "API Gateway",
+      image: "images/ms2.jpg",
+    },
+
+    {
+      title: "Authentication Service",
+      image: "images/ms3.jpg",
+    },
+
+    {
+      title: "Request Flow",
+      image: "images/ms4.jpg",
+    },
+
+    {
+      title: "gRPC Communication",
+      image: "images/ms5.jpg",
+    },
+
+    {
+      title: "RabbitMQ Event Bus",
+      image: "images/ms6.jpg",
+    },
+
+    {
+      title: "Database per Service",
+      image: "images/ms7.jpg",
+    },
+
+    {
+      title: "Domain Services",
+      image: "images/ms8.jpg",
+    },
+
+    {
+      title: "Production Deployment",
+      image: "images/ms9.jpg",
+    }
+  ],
+},
 
   {
     title: "Enterprise Desktop Suite",
