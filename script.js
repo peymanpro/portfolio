@@ -210,7 +210,7 @@ const SectionRenderer = {
     createDescription(text) {
         const el = document.createElement('p');
         el.className = 'description';
-        el.textContent = text;
+        el.innerHTML = text;
         return el;
     },
 

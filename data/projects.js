@@ -221,6 +221,41 @@ const sections = [
     ],
   },
 
+
+{
+  title: "SurangMarket",
+
+  description:
+    "SurangMarket is a modern medical equipment e-commerce platform developed in collaboration with Farda Afzar Chabok Co. As a Full-Stack Developer, I contributed to the end-to-end development of the platform by implementing fourteen core business modules across both frontend and backend layers. The solution combines Domain-Driven Design (DDD) and Clean Architecture on the backend with a Feature-Based Architecture on the frontend, resulting in a modular, maintainable, and scalable codebase. My responsibilities included implementing the Discount, Installments, Orders, Payments, Price Inquiry, Shopping Cart, Agent Plans, Bank Accounts Management, Banners, Gift Cards, Wallet, Shipping, and RMA modules, as well as contributing to REST API development, database modeling, and UI/UX improvements. The project was successfully delivered on schedule and deployed to production. The live system is available at <a href='http://www.surangmarket.com' target='_blank' rel='noopener noreferrer'>www.surangmarket.com</a>.",
+
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Redux Toolkit",
+    "Feature-Based Architecture",
+    "Tailwind CSS",
+    "NextAuth.js",
+    "NestJS",
+    "Domain-Driven Design (DDD)",
+    "Clean Architecture",
+    "REST API",
+    "PostgreSQL",
+    "TypeORM",
+    "Redis",
+    "RabbitMQ",
+    "Docker"
+  ],
+
+  items: [
+    {
+      title: "SurangMarket Home Page",
+      image: "images/surangmarket-home-page.jpg",
+    }
+  ],
+},
+
+  
   {
     title: "Scientific Achievement",
 
