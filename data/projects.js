@@ -1,4 +1,4 @@
-const sections = [
+export const sections = [
   {
   title: "Enterprise Micro Frontend Architecture",
 
