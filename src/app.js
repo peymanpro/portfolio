@@ -1,8 +1,7 @@
 
 import { state, setTheme, setLanguage, onThemeChange, onLanguageChange, getTranslations } from './modules/state.js';
 import { renderHero, SectionRenderer } from './modules/Renderer.js';
-
-let currentApp = null;
+import { sectionsData } from './data/projects.js';
 
 function renderApp() {
   const content = document.getElementById('content');
@@ -10,12 +9,20 @@ function renderApp() {
 
   content.innerHTML = '';
 
+
   const heroElement = renderHero();
   content.appendChild(heroElement);
 
-  const sectionsData = getTranslations().sections;
-  sectionsData.forEach((sectionData) => {
-    const element = SectionRenderer.renderSection(sectionData);
+ 
+  const t = getTranslations();
+  const sections = t.sections;
+
+  sections.forEach((sectionData) => {
+  
+    const staticData = sectionsData.find(s => s.id === sectionData.id);
+    const techs = staticData ? staticData.technologies : [];
+    const items = staticData ? staticData.items : [];
+    const element = SectionRenderer.renderSection(sectionData, techs, items);
     if (element) content.appendChild(element);
   });
 }
@@ -24,6 +31,7 @@ function createControls() {
   const controls = document.createElement('div');
   controls.className = 'controls';
 
+  // دکمه تغییر تم
   const themeBtn = document.createElement('button');
   themeBtn.className = 'control-btn';
   themeBtn.setAttribute('aria-label', 'Toggle theme');
@@ -37,11 +45,11 @@ function createControls() {
   const langBtn = document.createElement('button');
   langBtn.className = 'control-btn';
   langBtn.setAttribute('aria-label', 'Toggle language');
-  langBtn.innerHTML = state.language === 'fa' ? '<i class="fas fa-globe"></i> EN' : '<i class="fas fa-globe"></i> FA';
+  langBtn.innerHTML = state.language === 'fa' ? '🇬🇧 EN' : '🇮🇷 FA';
   langBtn.addEventListener('click', () => {
     const newLang = state.language === 'fa' ? 'en' : 'fa';
     setLanguage(newLang);
-    langBtn.innerHTML = newLang === 'fa' ? '<i class="fas fa-globe"></i> EN' : '<i class="fas fa-globe"></i> FA';
+    langBtn.innerHTML = newLang === 'fa' ? '🇬🇧 EN' : '🇮🇷 FA';
     renderApp();
   });
 
@@ -55,11 +63,6 @@ function createControls() {
 }
 
 function init() {
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-  document.head.appendChild(link);
-
   createControls();
   renderApp();
 
@@ -71,7 +74,7 @@ function init() {
   onLanguageChange(() => {
     renderApp();
     const langBtn = document.querySelector('.control-btn:last-child');
-    if (langBtn) langBtn.innerHTML = state.language === 'fa' ? '<i class="fas fa-globe"></i> EN' : '<i class="fas fa-globe"></i> FA';
+    if (langBtn) langBtn.innerHTML = state.language === 'fa' ? '🇬🇧 EN' : '🇮🇷 FA';
   });
 }
 
