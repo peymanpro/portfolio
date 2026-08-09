@@ -48,6 +48,7 @@ export function getTranslations() {
   return translations[state.language] || translations.fa;
 }
 
+
 document.documentElement.setAttribute('data-theme', state.theme);
 document.documentElement.setAttribute('lang', state.language === 'fa' ? 'fa' : 'en');
 document.documentElement.dir = state.language === 'fa' ? 'rtl' : 'ltr';
