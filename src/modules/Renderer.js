@@ -1,27 +1,84 @@
 
-import { Gallery } from './Gallery.js';
+import { createGallery } from './Gallery.js';
 import { getTranslations } from './state.js';
-import { createExpandableText } from './TextExpander.js';
+
+
+function createExpandableDescription(text, maxLines = 2) {
+  const container = document.createElement('div');
+  container.className = 'desc-wrapper';
+
+  const p = document.createElement('p');
+  p.className = 'description expandable';
+  p.innerHTML = text; 
+  container.appendChild(p);
+
+  
+  const toggle = document.createElement('span');
+  toggle.className = 'toggle-desc';
+  toggle.setAttribute('role', 'button');
+  toggle.setAttribute('tabindex', '0');
+  toggle.setAttribute('aria-expanded', 'false');
+
+  const icon = document.createElement('i');
+  icon.className = 'fas fa-chevron-down';
+  toggle.appendChild(icon);
+
+  const label = document.createElement('span');
+  label.className = 'toggle-label';
+  const t = getTranslations().ui;
+  label.textContent = t.showMore;
+  toggle.appendChild(label);
+
+  container.appendChild(toggle);
+
+  let expanded = false;
+
+  function toggleExpand() {
+    expanded = !expanded;
+    p.classList.toggle('expanded', expanded);
+    const t = getTranslations().ui;
+    label.textContent = expanded ? t.showLess : t.showMore;
+    icon.className = expanded ? 'fas fa-chevron-up' : 'fas fa-chevron-down';
+    toggle.setAttribute('aria-expanded', expanded);
+  }
+
+  toggle.addEventListener('click', toggleExpand);
+  toggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleExpand();
+    }
+  });
+
+  requestAnimationFrame(() => {
+    const lineHeight = parseFloat(getComputedStyle(p).lineHeight) || 24;
+    const maxHeight = lineHeight * maxLines;
+    if (p.scrollHeight <= maxHeight + 2) {
+      toggle.style.display = 'none';
+    }
+  });
+
+  return container;
+}
 
 export function renderHero() {
-  const t = getTranslations();
-  const hero = t.hero;
-  const ui = t.ui;
-
+  const t = getTranslations().hero;
   const header = document.createElement('header');
   header.className = 'hero';
 
   const h1 = document.createElement('h1');
-  h1.textContent = hero.title;
+  h1.textContent = t.title;
   header.appendChild(h1);
 
   const h2 = document.createElement('h2');
-  h2.textContent = hero.subtitle;
+  h2.textContent = t.subtitle;
   header.appendChild(h2);
 
-  hero.paragraphs.forEach((text) => {
-    const expandable = createExpandableText(text, 2, ui.seeMore, ui.seeLess);
-    header.appendChild(expandable);
+  t.paragraphs.forEach((text) => {
+    const wrapper = createExpandableDescription(text, 2);
+    wrapper.querySelector('.description').style.maxWidth = '700px';
+    wrapper.querySelector('.description').style.margin = '0 auto';
+    header.appendChild(wrapper);
   });
 
   return header;
@@ -34,10 +91,8 @@ export const SectionRenderer = {
     return el;
   },
 
-  createDescription(text, seeMoreLabel, seeLessLabel) {
-    const expandable = createExpandableText(text, 2, seeMoreLabel, seeLessLabel);
-    expandable.className = 'description expandable-text';
-    return expandable;
+  createDescription(text) {
+    return createExpandableDescription(text, 2);
   },
 
   createTechnologies(techs) {
@@ -74,7 +129,7 @@ export const SectionRenderer = {
     title.textContent = getTranslations().ui.gallery;
     container.appendChild(title);
 
-    const gallery = Gallery.createGallery(items);
+    const gallery = createGallery(items);
     if (gallery) {
       container.appendChild(gallery);
     }
@@ -82,26 +137,25 @@ export const SectionRenderer = {
     return container;
   },
 
-  renderSection(sectionData) {
+  renderSection(sectionData, techs, items) {
     const element = document.createElement('section');
-    const ui = getTranslations().ui;
 
     if (sectionData.title) {
       element.appendChild(this.createTitle(sectionData.title));
     }
 
     if (sectionData.description) {
-      const desc = this.createDescription(sectionData.description, ui.seeMore, ui.seeLess);
-      element.appendChild(desc);
+      const descWrapper = this.createDescription(sectionData.description);
+      element.appendChild(descWrapper);
     }
 
-    if (sectionData.technologies && sectionData.technologies.length > 0) {
-      const techEl = this.createTechnologies(sectionData.technologies);
+    if (techs && techs.length > 0) {
+      const techEl = this.createTechnologies(techs);
       if (techEl) element.appendChild(techEl);
     }
 
-    if (sectionData.items && sectionData.items.length > 0) {
-      const galleryEl = this.createGallerySection(sectionData.items);
+    if (items && items.length > 0) {
+      const galleryEl = this.createGallerySection(items);
       if (galleryEl) element.appendChild(galleryEl);
     }
 
