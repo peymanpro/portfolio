@@ -49,7 +49,7 @@ function setupWheelScroll(gallery) {
   }, { passive: false });
 }
 
-function createGallery(items) {
+export function createGallery(items) {
   if (!items || items.length === 0) return null;
 
   const wrapper = document.createElement('div');
@@ -116,10 +116,12 @@ function createGallery(items) {
 
   gallery.addEventListener('scroll', scrollHandler);
 
+  
   requestAnimationFrame(() => {
     updateButtons(gallery, leftBtn, rightBtn);
   });
 
+ 
   const resizeObserver = new ResizeObserver(() => {
     updateButtons(gallery, leftBtn, rightBtn);
   });
@@ -136,5 +138,3 @@ function createGallery(items) {
 
   return wrapper;
 }
-
-export const Gallery = { createGallery };
