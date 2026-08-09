@@ -77,27 +77,5 @@ export const sectionsData = [
     items: [
       { title: 'Top 1% Scientist Certificate', image: 'images/top-1-percent-scientist-certificate.jpg' }
     ]
-  },
-  {
-    id: 'training',
-    technologies: [
-      'C#', '.NET', 'ASP.NET Core', 'React', 'Next.js', 'TypeScript',
-      'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap',
-      'Redux', 'Redux Toolkit', 'Zustand', 'GraphQL', 'gRPC', 'Web API',
-      'RabbitMQ', 'Redis', 'Microservices', 'Micro Frontend',
-      'Module Federation', 'CQRS', 'MediatR', 'Clean Architecture',
-      'Design Patterns', 'Entity Framework Core', 'Dapper', 'Identity',
-      'OAuth 2.0', 'JWT', 'Blazor', 'WPF', 'AngularJS', 'Go', 'PHP', 'Python'
-    ],
-    items: [
-      { title: '1', image: 'images/course-01.jpg' },
-      { title: '2', image: 'images/course-02.jpg' },
-      { title: '3', image: 'images/course-03.jpg' },
-      { title: '4', image: 'images/course-04.jpg' },
-      { title: '5', image: 'images/course-05.jpg' },
-      { title: '6', image: 'images/course-06.jpg' },
-      { title: '7', image: 'images/course-07.jpg' },
-      { title: '8', image: 'images/course-08.jpg' }
-    ]
   }
 ];

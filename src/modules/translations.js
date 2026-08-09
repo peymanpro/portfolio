@@ -42,11 +42,6 @@ export const translations = {
         id: 'scientific',
         title: 'دستاورد علمی',
         description: 'جزو ۱٪ برتر دانشمندان جهان بر اساس رتبه‌بندی ISC.'
-      },
-      {
-        id: 'training',
-        title: 'آموزش حرفه‌ای و یادگیری مستمر',
-        description: 'یادگیری مستمر همواره بخشی اساسی از مسیر حرفه‌ای من بوده است. در طول سال‌ها، در دوره‌های تخصصی متعددی در زمینهٔ مهندسی نرم‌افزار مدرن، معماری سازمانی، توسعهٔ فرانت‌اند و بک‌اند، سیستم‌های توزیع‌شده، طراحی نرم‌افزار و فناوری‌های نوظهور شرکت کرده‌ام. گالری زیر گزیده‌ای از مدارک این دوره‌ها را نشان می‌دهد که بخشی از مسیر یادگیری بلندمدت مرا بازتاب می‌دهد.'
       }
     ]
   },
@@ -92,11 +87,6 @@ export const translations = {
         id: 'scientific',
         title: 'Scientific Achievement',
         description: 'Recognized among the world\'s Top 1% Scientists by the ISC.'
-      },
-      {
-        id: 'training',
-        title: 'Professional Training & Continuous Learning',
-        description: 'Continuous learning has always been an essential part of my professional development. Over the years, I have invested in numerous professional courses covering modern software engineering, enterprise architecture, frontend and backend development, distributed systems, software design, and emerging technologies. The gallery below contains selected purchase records representing part of my long-term learning journey.'
       }
     ]
   }
