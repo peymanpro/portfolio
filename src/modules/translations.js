@@ -1,130 +1,139 @@
-
 export const translations = {
   fa: {
     ui: {
-      technologies: 'فناوری‌ها',
-      gallery: 'گالری',
-      toggleTheme: 'تغییر تم',
-      toggleLanguage: 'تغییر زبان',
-      showMore: 'مشاهده بیشتر',
-      showLess: 'مشاهده کمتر'
+      technologies: "فناوری‌ها",
+      gallery: "گالری",
+      toggleTheme: "تغییر تم",
+      toggleLanguage: "تغییر زبان",
+      showMore: "مشاهده بیشتر",
+      showLess: "مشاهده کمتر",
     },
 
     hero: {
-      title: 'پیمان سلیمی',
-      subtitle: 'معمار نرم‌افزار سازمانی • توسعه‌دهنده فول‌استک • مدل‌سازی، تحلیل داده و پشتیبانی از تصمیم‌گیری',
+      title: "پیمان سلیمی",
+      subtitle:
+        "معمار نرم‌افزار سازمانی • توسعه‌دهنده فول‌استک • مدل‌سازی، تحلیل داده و پشتیبانی از تصمیم‌گیری",
 
       paragraphs: [
-        'به پورتفولیوی من خوش آمدید. من معمار نرم‌افزار سازمانی و توسعه‌دهنده فول‌استک هستم و سابقه‌ای چندرشته‌ای در مهندسی نرم‌افزار سازمانی، محاسبات علمی، مدل‌سازی ریاضی، تحلیل داده، طراحی الگوریتم و معماری نرم‌افزار دارم. تمرکز اصلی من بر طراحی و توسعه سیستم‌های سازمانی مقیاس‌پذیر، قابل نگهداری و با کارایی بالا، با استفاده از الگوهای معماری و شیوه‌های مهندسی نرم‌افزار است.',
+        "به پورتفولیوی من خوش آمدید. من معمار نرم‌افزار سازمانی و توسعه‌دهنده فول‌استک هستم و سابقه‌ای چندرشته‌ای در مهندسی نرم‌افزار سازمانی، محاسبات علمی، مدل‌سازی ریاضی، تحلیل داده، طراحی الگوریتم و معماری نرم‌افزار دارم. تمرکز اصلی من بر طراحی و توسعه سیستم‌های سازمانی مقیاس‌پذیر، قابل نگهداری و با کارایی بالا، با استفاده از الگوهای معماری و شیوه‌های مهندسی نرم‌افزار است.",
 
-       'این پورتفولیو مجموعه‌ای منتخب از پروژه‌های واقعی، معماری‌های نرم‌افزاری، تصمیمات مهندسی و راهکارهای فنی توسعه‌یافته برای سازمان‌ها را ارائه می‌دهد. برای رعایت محرمانگی پروژه‌ها، برخی جزئیات پیاده‌سازی در نمودارها و توضیحات عمداً ساده‌سازی شده‌اند؛ با این حال، معماری‌های ارائه‌شده بیانگر اصول اصلی طراحی، فناوری‌ها و رویکردهای مهندسی به‌کاررفته در سیستم‌های اصلی هستند.'
-      ]
+        "این پورتفولیو مجموعه‌ای منتخب از پروژه‌های واقعی، معماری‌های نرم‌افزاری، تصمیمات مهندسی و راهکارهای فنی توسعه‌یافته برای سازمان‌ها را ارائه می‌دهد. جهت حفظ محرمانگی اطلاعات سازمانی، محصولی و فنی پروژه‌ها، بخش زیادی از جزئیات پیاده‌سازی در نمودارها و توضیحات عمداً ساده‌سازی یا حذف شده‌اند. در بخش‌های مرتبط با رابط کاربری و تجربه کاربری (UI/UX) نیز تنها بخش‌های عمومی‌تر و غیرحساس پروژه‌ها نمایش داده شده‌اند و از ارائه تصاویری که می‌توانند اطلاعات اختصاصی، ساختارهای داخلی یا منطق کسب‌وکار پروژه‌ها را آشکار کنند، خودداری شده است. با این حال، معماری‌ها، تصمیمات فنی و نمونه‌های ارائه‌شده بیانگر اصول اصلی طراحی، فناوری‌ها و رویکردهای مهندسی به‌کاررفته در سیستم‌های اصلی هستند و تصویری واقعی از نوع مسائل فنی و راهکارهای مورد استفاده ارائه می‌دهند.",
+      ],
     },
 
     sections: [
       {
-        id: 'micro-frontend',
+        id: "micro-frontend",
 
-        title: 'معماری میکرو فرانت‌اند سازمانی',
+        title: "معماری میکرو فرانت‌اند سازمانی",
 
-        description: 'این معماری برای شرکت چلیک‌سازان ایرانیان، به‌عنوان زیرساخت فرانت‌اند پلتفرم مدیریت اطلاعات سازمانی طراحی و پیاده‌سازی شده است. هدف اصلی، ایجاد یک برنامه سازمانی مقیاس‌پذیر بود؛ برای این منظور، رابط کاربری به میکرو فرانت‌اندهایی مستقل تقسیم شد که هرکدام قابلیت توسعه و استقرار مستقل دارند. یک Meta AppShell کل پلتفرم را هماهنگ می‌کند و وظایفی مانند راه‌اندازی اولیه، بررسی احراز هویت، بارگذاری پویای ماژول‌ها، ناوبری و کنترل دسترسی مبتنی بر نقش را بر عهده دارد. برنامه‌های کسب‌وکار با استفاده از Webpack Module Federation به‌صورت پویا و در زمان اجرا یکپارچه می‌شوند؛ این رویکرد امکان توسعه، استقرار و نگهداری مستقل در حوزه‌های مختلف کسب‌وکار را فراهم می‌کند. نمودارهای منتشرشده برای حفظ محرمانگی پروژه، برخی جزئیات را ساده‌سازی کرده‌اند؛ با این حال، معماری کلی، رفتار زمان اجرا و تصمیمات مهندسی را به‌دقت نشان می‌دهند.'
+        description:
+          "این معماری برای شرکت چلیک‌سازان ایرانیان، به‌عنوان زیرساخت فرانت‌اند پلتفرم مدیریت اطلاعات سازمانی طراحی و پیاده‌سازی شده است. هدف اصلی، ایجاد یک برنامه سازمانی مقیاس‌پذیر بود؛ برای این منظور، رابط کاربری به میکرو فرانت‌اندهایی مستقل تقسیم شد که هرکدام قابلیت توسعه و استقرار مستقل دارند. یک Meta AppShell کل پلتفرم را هماهنگ می‌کند و وظایفی مانند راه‌اندازی اولیه، بررسی احراز هویت، بارگذاری پویای ماژول‌ها، ناوبری و کنترل دسترسی مبتنی بر نقش را بر عهده دارد. برنامه‌های کسب‌وکار با استفاده از Webpack Module Federation به‌صورت پویا و در زمان اجرا یکپارچه می‌شوند؛ این رویکرد امکان توسعه، استقرار و نگهداری مستقل در حوزه‌های مختلف کسب‌وکار را فراهم می‌کند. نمودارهای منتشرشده برای حفظ محرمانگی پروژه، برخی جزئیات را ساده‌سازی کرده‌اند؛ با این حال، معماری کلی، رفتار زمان اجرا و تصمیمات مهندسی را به‌دقت نشان می‌دهند.",
       },
 
       {
-        id: 'microservices',
+        id: "microservices",
 
-        title: 'معماری میکروسرویس‌های سازمانی',
+        title: "معماری میکروسرویس‌های سازمانی",
 
-        description: 'این معماری برای شرکت چلیک‌سازان ایرانیان، به‌عنوان زیرساخت بک‌اند پلتفرم مدیریت اطلاعات سازمانی طراحی و پیاده‌سازی شده است. هدف اصلی، پشتیبانی از اکوسیستم میکرو فرانت‌اند سازمان و ایجاد یک معماری سرویس‌گرا، مقیاس‌پذیر و آماده توسعه در آینده بود. یک API Gateway متمرکز مبتنی بر YARP به‌عنوان نقطه ورود واحد برای تمامی برنامه‌های فعلی و آینده در نظر گرفته شد و امکان یکپارچه‌سازی با وب، دسکتاپ، موبایل و سیستم‌های ثالث را فراهم می‌کند. یک سرویس احراز هویت اختصاصی، مدیریت متمرکز هویت و امنیت یکپارچه را در سراسر اکوسیستم نرم‌افزاری شرکت ارائه می‌دهد. هر حوزه کسب‌وکار به‌صورت یک میکروسرویس مستقل با پایگاه داده مستقل خود پیاده‌سازی شده است و gRPC و RabbitMQ ارتباطات هم‌زمان و غیرهم‌زمان میان سرویس‌ها را فراهم می‌کنند. نمودارهای منتشرشده برای حفظ محرمانگی، برخی جزئیات را ساده‌سازی کرده‌اند؛ با این حال، طراحی کلی معماری و تصمیمات مهندسی را به‌دقت نشان می‌دهند.'
+        description:
+          "این معماری برای شرکت چلیک‌سازان ایرانیان، به‌عنوان زیرساخت بک‌اند پلتفرم مدیریت اطلاعات سازمانی طراحی و پیاده‌سازی شده است. هدف اصلی، پشتیبانی از اکوسیستم میکرو فرانت‌اند سازمان و ایجاد یک معماری سرویس‌گرا، مقیاس‌پذیر و آماده توسعه در آینده بود. یک API Gateway متمرکز مبتنی بر YARP به‌عنوان نقطه ورود واحد برای تمامی برنامه‌های فعلی و آینده در نظر گرفته شد و امکان یکپارچه‌سازی با وب، دسکتاپ، موبایل و سیستم‌های ثالث را فراهم می‌کند. یک سرویس احراز هویت اختصاصی، مدیریت متمرکز هویت و امنیت یکپارچه را در سراسر اکوسیستم نرم‌افزاری شرکت ارائه می‌دهد. هر حوزه کسب‌وکار به‌صورت یک میکروسرویس مستقل با پایگاه داده مستقل خود پیاده‌سازی شده است و gRPC و RabbitMQ ارتباطات هم‌زمان و غیرهم‌زمان میان سرویس‌ها را فراهم می‌کنند. نمودارهای منتشرشده برای حفظ محرمانگی، برخی جزئیات را ساده‌سازی کرده‌اند؛ با این حال، طراحی کلی معماری و تصمیمات مهندسی را به‌دقت نشان می‌دهند.",
       },
 
       {
-        id: 'desktop-suite',
+        id: "desktop-suite",
 
-        title: 'مجموعه نرم‌افزارهای دسکتاپ سازمانی',
+        title: "مجموعه نرم‌افزارهای دسکتاپ سازمانی",
 
-        description: 'یک پلتفرم دسکتاپ یکپارچه برای شرکت چلیک‌سازان ایرانیان توسعه یافته است. این نرم‌افزار، چندین سیستم سازمانی را در قالب یک برنامه واحد Windows Forms ارائه می‌دهد. کاربران می‌توانند بدون خروج از برنامه، از طریق منوی «نرم‌افزار محلی سازمان» میان سیستم‌های مختلف جابه‌جا شوند.'
+        description:
+          "یک پلتفرم دسکتاپ یکپارچه برای شرکت چلیک‌سازان ایرانیان توسعه یافته است. این نرم‌افزار، چندین سیستم سازمانی را در قالب یک برنامه واحد Windows Forms ارائه می‌دهد. کاربران می‌توانند بدون خروج از برنامه، از طریق منوی «نرم‌افزار محلی سازمان» میان سیستم‌های مختلف جابه‌جا شوند.",
       },
 
       {
-        id: 'surangmarket',
+        id: "surangmarket",
 
-        title: 'سورنگ مارکت',
+        title: "سورنگ مارکت",
 
-        description: 'سورنگ مارکت یک پلتفرم مدرن تجارت الکترونیک در حوزه تجهیزات پزشکی است که با همکاری شرکت فرداافزار چابک توسعه یافته است. به‌عنوان یک توسعه‌دهنده فول‌استک، در توسعه کامل پلتفرم از طراحی تا پیاده‌سازی مشارکت داشتم و چهارده ماژول اصلی کسب‌وکار را در لایه‌های فرانت‌اند و بک‌اند پیاده‌سازی کردم. این راهکار در بک‌اند از Domain-Driven Design (DDD) و Clean Architecture و در فرانت‌اند از Feature-Based Architecture بهره می‌برد که به شکل‌گیری کدی ماژولار، قابل نگهداری و مقیاس‌پذیر منجر شده است. مسئولیت‌های من شامل پیاده‌سازی ماژول‌های تخفیف، اقساط، سفارشات، پرداخت‌ها، استعلام قیمت، سبد خرید، طرح‌های نمایندگی، مدیریت حساب‌های بانکی، بنرها، کارت‌های هدیه، کیف پول، حمل‌ونقل و مرجوعی کالا (RMA)، همچنین مشارکت در توسعه REST API، مدل‌سازی پایگاه داده و بهبودهای UI/UX بود. پروژه طبق برنامه با موفقیت تحویل و در محیط عملیاتی مستقر شد. سامانه در حال اجرا در <a href="http://www.surangmarket.com" target="_blank" rel="noopener noreferrer">www.surangmarket.com</a> در دسترس است.'
+        description:
+          'سورنگ مارکت یک پلتفرم مدرن تجارت الکترونیک در حوزه تجهیزات پزشکی است که با همکاری شرکت فرداافزار چابک توسعه یافته است. به‌عنوان یک توسعه‌دهنده فول‌استک، در توسعه کامل پلتفرم از طراحی تا پیاده‌سازی مشارکت داشتم و چهارده ماژول اصلی کسب‌وکار را در لایه‌های فرانت‌اند و بک‌اند پیاده‌سازی کردم. این راهکار در بک‌اند از Domain-Driven Design (DDD) و Clean Architecture و در فرانت‌اند از Feature-Based Architecture بهره می‌برد که به شکل‌گیری کدی ماژولار، قابل نگهداری و مقیاس‌پذیر منجر شده است. مسئولیت‌های من شامل پیاده‌سازی ماژول‌های تخفیف، اقساط، سفارشات، پرداخت‌ها، استعلام قیمت، سبد خرید، طرح‌های نمایندگی، مدیریت حساب‌های بانکی، بنرها، کارت‌های هدیه، کیف پول، حمل‌ونقل و مرجوعی کالا (RMA)، همچنین مشارکت در توسعه REST API، مدل‌سازی پایگاه داده و بهبودهای UI/UX بود. پروژه طبق برنامه با موفقیت تحویل و در محیط عملیاتی مستقر شد. سامانه در حال اجرا در <a href="http://www.surangmarket.com" target="_blank" rel="noopener noreferrer">www.surangmarket.com</a> در دسترس است.',
       },
 
       {
-        id: 'scientific',
+        id: "scientific",
 
-        title: 'دستاورد علمی',
+        title: "دستاورد علمی",
 
-        description: 'در میان ۱٪ برتر دانشمندان جهان بر اساس رتبه‌بندی ISC.'
-      }
-    ]
+        description: "در میان ۱٪ برتر دانشمندان جهان بر اساس رتبه‌بندی ISC.",
+      },
+    ],
   },
 
   en: {
     ui: {
-      technologies: 'Technologies',
-      gallery: 'Gallery',
-      toggleTheme: 'Toggle Theme',
-      toggleLanguage: 'Toggle Language',
-      showMore: 'Show more',
-      showLess: 'Show less'
+      technologies: "Technologies",
+      gallery: "Gallery",
+      toggleTheme: "Toggle Theme",
+      toggleLanguage: "Toggle Language",
+      showMore: "Show more",
+      showLess: "Show less",
     },
 
     hero: {
-      title: 'Peyman Salimi',
-      subtitle: 'Enterprise Software Architect • Full-Stack Developer • Modeling, Analytics & Decision Support',
+      title: "Peyman Salimi",
+      subtitle:
+        "Enterprise Software Architect • Full-Stack Developer • Modeling, Analytics & Decision Support",
 
       paragraphs: [
-        'Welcome to my portfolio. I’m an Enterprise Software Architect and Full-Stack Developer with a multidisciplinary background spanning enterprise software engineering, scientific computing, mathematical modeling, data analysis, algorithm design, and software architecture. My work focuses on designing and developing scalable, maintainable, and high-performance enterprise systems using modern architectural patterns and software engineering practices.',
-
-        'This portfolio presents selected real-world projects, software architectures, engineering decisions, and technical solutions developed for organizations. To respect project confidentiality, certain implementation details have been intentionally simplified in the diagrams and descriptions; however, the showcased architectures represent the core design principles, technologies, and engineering approaches used in the original systems.'
-      ]
+        "Welcome to my portfolio. I’m an Enterprise Software Architect and Full-Stack Developer with a multidisciplinary background spanning enterprise software engineering, scientific computing, mathematical modeling, data analysis, algorithm design, and software architecture. My work focuses on designing and developing scalable, maintainable, and high-performance enterprise systems using modern architectural patterns and software engineering practices.",
+        "This portfolio presents a selected collection of real-world projects, software architectures, engineering decisions, and technical solutions developed for organizations. To protect the confidentiality of organizational, product, and technical information, a significant portion of the implementation details has been intentionally simplified or omitted from the diagrams and descriptions. In sections related to user interface and user experience (UI/UX), only the more general and non-sensitive parts of the projects are presented, while screenshots that could reveal proprietary information, internal structures, or business logic have been intentionally excluded. Nevertheless, the architectures, technical decisions, and examples presented here reflect the core design principles, technologies, and engineering approaches used in the original systems and provide a genuine representation of the types of technical challenges addressed and solutions implemented.",
+      ],
     },
 
     sections: [
       {
-        id: 'micro-frontend',
+        id: "micro-frontend",
 
-        title: 'Enterprise Micro Frontend Architecture',
+        title: "Enterprise Micro Frontend Architecture",
 
-        description: 'This architecture was designed and implemented for Chilik Sazan Iranian Co. as the frontend foundation of the Enterprise Information Management Platform. The primary objective was to build a scalable enterprise application by decomposing the user interface into independently developed and deployable Micro Frontends. A Meta AppShell orchestrates the entire platform by handling application bootstrap, authentication checks, runtime module loading, navigation, and role-based access control. Business applications are dynamically integrated at runtime using Webpack Module Federation, enabling independent development, deployment, and maintenance across multiple business domains. The published diagrams intentionally simplify certain implementation details to respect project confidentiality while accurately representing the overall architecture, runtime behavior, and engineering decisions.'
+        description:
+          "This architecture was designed and implemented for Chilik Sazan Iranian Co. as the frontend foundation of the Enterprise Information Management Platform. The primary objective was to build a scalable enterprise application by decomposing the user interface into independently developed and deployable Micro Frontends. A Meta AppShell orchestrates the entire platform by handling application bootstrap, authentication checks, runtime module loading, navigation, and role-based access control. Business applications are dynamically integrated at runtime using Webpack Module Federation, enabling independent development, deployment, and maintenance across multiple business domains. The published diagrams intentionally simplify certain implementation details to respect project confidentiality while accurately representing the overall architecture, runtime behavior, and engineering decisions.",
       },
 
       {
-        id: 'microservices',
+        id: "microservices",
 
-        title: 'Enterprise Microservices Architecture',
+        title: "Enterprise Microservices Architecture",
 
-        description: 'This architecture was designed and implemented for Chilik Sazan Iranian Co. as the backend foundation of the Enterprise Information Management Platform. The primary objective was to support the organization’s Micro Frontend ecosystem while establishing a scalable and future-ready service architecture. A centralized YARP API Gateway was introduced as the single entry point for all current and future client applications, enabling seamless integration with web, desktop, mobile, and third-party systems. A dedicated Authentication Service provides centralized identity management and consistent security across the company’s software ecosystem. Each business domain is implemented as an autonomous microservice with its own database, while gRPC and RabbitMQ enable efficient synchronous and asynchronous communication between services. The published diagrams intentionally simplify certain implementation details to respect project confidentiality while accurately representing the overall architectural design and engineering decisions.'
+        description:
+          "This architecture was designed and implemented for Chilik Sazan Iranian Co. as the backend foundation of the Enterprise Information Management Platform. The primary objective was to support the organization’s Micro Frontend ecosystem while establishing a scalable and future-ready service architecture. A centralized YARP API Gateway was introduced as the single entry point for all current and future client applications, enabling seamless integration with web, desktop, mobile, and third-party systems. A dedicated Authentication Service provides centralized identity management and consistent security across the company’s software ecosystem. Each business domain is implemented as an autonomous microservice with its own database, while gRPC and RabbitMQ enable efficient synchronous and asynchronous communication between services. The published diagrams intentionally simplify certain implementation details to respect project confidentiality while accurately representing the overall architectural design and engineering decisions.",
       },
 
       {
-        id: 'desktop-suite',
+        id: "desktop-suite",
 
-        title: 'Enterprise Desktop Suite',
+        title: "Enterprise Desktop Suite",
 
-        description: 'An integrated enterprise desktop platform developed for Chilik Sazan Iranian Co. The application provides multiple organizational systems through a unified Windows Forms application. Users can switch between different systems from the “Organization Local Software” menu without leaving the application.'
+        description:
+          "An integrated enterprise desktop platform developed for Chilik Sazan Iranian Co. The application provides multiple organizational systems through a unified Windows Forms application. Users can switch between different systems from the “Organization Local Software” menu without leaving the application.",
       },
 
       {
-        id: 'surangmarket',
+        id: "surangmarket",
 
-        title: 'SurangMarket',
+        title: "SurangMarket",
 
-        description: 'SurangMarket is a modern medical equipment e-commerce platform developed in collaboration with Farda Afzar Chabok Co. As a Full-Stack Developer, I contributed to the end-to-end development of the platform, from design through implementation, by developing fourteen core business modules across both frontend and backend layers. The solution combines Domain-Driven Design (DDD) and Clean Architecture on the backend with Feature-Based Architecture on the frontend, resulting in a modular, maintainable, and scalable codebase. My responsibilities included implementing the Discount, Installments, Orders, Payments, Price Inquiry, Shopping Cart, Agent Plans, Bank Accounts Management, Banners, Gift Cards, Wallet, Shipping, and Return Merchandise Authorization (RMA) modules, as well as contributing to REST API development, database modeling, and UI/UX improvements. The project was successfully delivered on schedule and deployed to production. The live system is available at <a href="http://www.surangmarket.com" target="_blank" rel="noopener noreferrer">www.surangmarket.com</a>.'
+        description:
+          'SurangMarket is a modern medical equipment e-commerce platform developed in collaboration with Farda Afzar Chabok Co. As a Full-Stack Developer, I contributed to the end-to-end development of the platform, from design through implementation, by developing fourteen core business modules across both frontend and backend layers. The solution combines Domain-Driven Design (DDD) and Clean Architecture on the backend with Feature-Based Architecture on the frontend, resulting in a modular, maintainable, and scalable codebase. My responsibilities included implementing the Discount, Installments, Orders, Payments, Price Inquiry, Shopping Cart, Agent Plans, Bank Accounts Management, Banners, Gift Cards, Wallet, Shipping, and Return Merchandise Authorization (RMA) modules, as well as contributing to REST API development, database modeling, and UI/UX improvements. The project was successfully delivered on schedule and deployed to production. The live system is available at <a href="http://www.surangmarket.com" target="_blank" rel="noopener noreferrer">www.surangmarket.com</a>.',
       },
 
       {
-        id: 'scientific',
+        id: "scientific",
 
-        title: 'Scientific Achievement',
+        title: "Scientific Achievement",
 
-        description: 'Recognized among the world’s Top 1% Scientists according to the ISC ranking.'
-      }
-    ]
-  }
-}
+        description:
+          "Recognized among the world’s Top 1% Scientists according to the ISC ranking.",
+      },
+    ],
+  },
+};
