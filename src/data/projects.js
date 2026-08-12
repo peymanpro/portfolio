@@ -11,6 +11,7 @@ export const sectionsData = [
       { title: 'LoginMF', image: 'images/information-management-login.jpg' },
       { title: 'PortalMF', image: 'images/information-management-main-pages.jpg' },
       { title: 'MeatChickenPro Micro Frontend', image: 'images/meat-chicken-pro-home-page.jpg' },
+      { title: 'MeatChickenPro Micro Frontend', image: 'images/meat-chicken-pro-home-page-drawer.jpg' },
       { title: 'Runtime Flow', image: 'images/d1.jpg' },
       { title: 'Ecosystem', image: 'images/d2.jpg' },
       { title: 'Meta AppShell', image: 'images/d3.jpg' },
