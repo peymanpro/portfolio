@@ -12,12 +12,10 @@ export const translations = {
     hero: {
       title: "پیمان سلیمی",
       subtitle:
-        "معمار نرم‌افزار سازمانی • توسعه‌دهنده فول‌استک • مدل‌سازی، تحلیل داده و پشتیبانی از تصمیم‌گیری",
+        "",
 
       paragraphs: [
-        "به پورتفولیوی من خوش آمدید. من معمار نرم‌افزار سازمانی و توسعه‌دهنده فول‌استک هستم و سابقه‌ای چندرشته‌ای در مهندسی نرم‌افزار سازمانی، محاسبات علمی، مدل‌سازی ریاضی، تحلیل داده، طراحی الگوریتم و معماری نرم‌افزار دارم. تمرکز اصلی من بر طراحی و توسعه سیستم‌های سازمانی مقیاس‌پذیر، قابل نگهداری و با کارایی بالا، با استفاده از الگوهای معماری و شیوه‌های مهندسی نرم‌افزار است.",
-
-        "این پورتفولیو مجموعه‌ای منتخب از پروژه‌های واقعی، معماری‌های نرم‌افزاری، تصمیمات مهندسی و راهکارهای فنی توسعه‌یافته برای سازمان‌ها را ارائه می‌دهد. جهت حفظ محرمانگی اطلاعات سازمانی، محصولی و فنی پروژه‌ها، بخش زیادی از جزئیات پیاده‌سازی در نمودارها و توضیحات عمداً ساده‌سازی، انتزاع یا حذف شده‌اند. در بخش‌های مرتبط با رابط کاربری و تجربه کاربری (UI/UX) نیز تنها بخش‌های عمومی‌تر و غیرحساس پروژه‌ها نمایش داده شده‌اند و از ارائه تصاویری که می‌توانند اطلاعات اختصاصی، ساختارهای داخلی یا منطق کسب‌وکار پروژه‌ها را آشکار کنند، خودداری شده است. تمامی نمونه‌ها و دیاگرام‌های منتشرشده با هدف نمایش اصول معماری، تصمیمات مهندسی و رویکردهای فنی تهیه شده‌اند و نباید به‌عنوان بازنمایی کامل و دقیق ساختار داخلی یا زیرساخت عملیاتی پروژه‌های اصلی تلقی شوند.",
+        "این پورتفولیو مجموعه‌ای منتخب از پروژه‌های انجام شده برای شرکت‌ها، معماری‌های نرم‌افزاری، تصمیمات مهندسی و راهکارهای فنی توسعه‌یافته برای سازمان‌ها را ارائه می‌دهد. جهت حفظ محرمانگی اطلاعات سازمانی، محصولی و فنی پروژه‌ها، بخش زیادی از جزئیات پیاده‌سازی در نمودارها و توضیحات عمداً ساده‌سازی، انتزاع یا حذف شده‌اند. در بخش‌های مرتبط با رابط کاربری و تجربه کاربری (UI/UX) نیز تنها بخش‌های عمومی‌تر و غیرحساس پروژه‌ها نمایش داده شده‌اند و از ارائه تصاویری که می‌توانند اطلاعات اختصاصی، ساختارهای داخلی یا منطق کسب‌وکار پروژه‌ها را آشکار کنند، خودداری شده است. تمامی نمونه‌ها و دیاگرام‌های منتشرشده با هدف نمایش اصول معماری، تصمیمات مهندسی و رویکردهای فنی تهیه شده‌اند و نباید به‌عنوان بازنمایی کامل و دقیق ساختار داخلی یا زیرساخت عملیاتی پروژه‌های اصلی تلقی شوند.",
       ],
     },
 
@@ -57,15 +55,6 @@ export const translations = {
         description:
           "سُرنگ مارکت یک مارکت‌پلیس تخصصی تجهیزات پزشکی و بخشی از اکوسیستم بیمارستان مجازی هوشمند است که با هدف ایجاد ارتباط مؤثر میان تأمین‌کنندگان و خریداران تجهیزات پزشکی توسعه یافته است. به‌عنوان یک توسعه‌دهنده فول‌استک، در همکاری با تیم توسعه، در فرآیند توسعه پلتفرم از طراحی تا پیاده‌سازی نقش داشتم و بخش‌های مختلف کسب‌وکار را در لایه‌های فرانت‌اند و بک‌اند پیاده‌سازی کردم. این راهکار در بک‌اند از Domain-Driven Design (DDD) و Clean Architecture و در فرانت‌اند از Feature-Based Architecture بهره می‌برد که به شکل‌گیری کدی ماژولار، قابل نگهداری و مقیاس‌پذیر منجر شده است. مسئولیت‌های من شامل توسعه قابلیت‌های مرتبط با سفارش، پرداخت، تخفیف، اقساط، سبد خرید، حساب‌های کاربری، کیف پول، حمل‌ونقل، مرجوعی کالا (RMA) و سایر بخش‌های اصلی پلتفرم، همچنین طراحی و توسعه REST API، مدل‌سازی پایگاه داده و بهبودهای UI/UX بود. پروژه با موفقیت به محیط عملیاتی منتقل شد و سامانه در حال اجرا در www.surangmarket.com در دسترس است.",
       },
-
-      {
-        id: "scientific",
-
-        title: "دستاورد علمی",
-
-        description:
-          "در میان ۱٪ برتر دانشمندان جهان بر اساس رتبه‌بندی ISC.",
-      },
     ],
   },
 
@@ -84,11 +73,9 @@ export const translations = {
       subtitle:
         "Enterprise Software Architect • Full-Stack Developer • Modeling, Analytics & Decision Support",
 
-      paragraphs: [
-        "Welcome to my portfolio. I’m an Enterprise Software Architect and Full-Stack Developer with a multidisciplinary background spanning enterprise software engineering, scientific computing, mathematical modeling, data analysis, algorithm design, and software architecture. My work focuses on designing and developing scalable, maintainable, and high-performance enterprise systems using modern architectural patterns and software engineering practices.",
-
-        "This portfolio presents a selected collection of real-world projects, software architectures, engineering decisions, and technical solutions developed for organizations. To protect the confidentiality of organizational, product, and technical information, a significant portion of the implementation details has been intentionally simplified, abstracted, or omitted from the diagrams and descriptions. In sections related to user interface and user experience (UI/UX), only the more general and non-sensitive parts of the projects are presented, while screenshots that could reveal proprietary information, internal structures, or business logic have been intentionally excluded. All published examples and diagrams are intended to demonstrate architectural principles, engineering decisions, and technical approaches and should not be interpreted as complete or exact representations of the internal structure or operational infrastructure of the original projects.",
-      ],
+ paragraphs: [
+  "This portfolio presents a selected collection of projects completed for companies, software architectures, engineering decisions, and technical solutions developed for organizations. To protect the confidentiality of organizational, product, and technical information, a significant portion of the implementation details has been intentionally simplified, abstracted, or omitted from the diagrams and descriptions. In sections related to user interface and user experience (UI/UX), only the more general and non-sensitive parts of the projects are presented, while screenshots that could reveal proprietary information, internal structures, or business logic have been intentionally excluded. All published examples and diagrams are intended to demonstrate architectural principles, engineering decisions, and technical approaches and should not be interpreted as complete or exact representations of the internal structure or operational infrastructure of the original projects.",
+],
     },
 
     sections: [
@@ -126,15 +113,6 @@ export const translations = {
 
         description:
           "Surang Market is a specialized medical equipment marketplace and part of the Smart Virtual Hospital ecosystem, developed to facilitate effective connections between medical equipment suppliers and buyers. As a Full-Stack Developer, I worked collaboratively with the development team throughout the platform’s development, from design to implementation, and implemented various business capabilities across both the frontend and backend layers. The solution follows Domain-Driven Design (DDD) and Clean Architecture on the backend, and a Feature-Based Architecture on the frontend, resulting in a modular, maintainable, and scalable codebase. My responsibilities included developing capabilities related to orders, payments, discounts, installments, shopping cart, user accounts, wallet, transportation, product returns (RMA), and other core areas of the platform, as well as designing and developing REST APIs, database modeling, and UI/UX improvements. The project was successfully delivered and deployed to production, and the live platform is available at www.surangmarket.com.",
-      },
-
-      {
-        id: "scientific",
-
-        title: "Scientific Achievement",
-
-        description:
-          "Recognized among the world’s Top 1% Scientists according to the ISC ranking.",
       },
     ],
   },
